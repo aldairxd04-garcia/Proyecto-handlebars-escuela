@@ -7,7 +7,7 @@ export async function connectToDatabaseMaria2(){
         // Conexión a MariaDB
         //USUARIOS
         const pool2 = mariadb.createPool({
-          host: "mariadb2", // Nombre del servicio del contenedor en Docker
+          host: "127.0.0.1", 
           port: 3306,
           user: "root",
           password: "54321",
