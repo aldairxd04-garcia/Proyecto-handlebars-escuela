@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-black mb-4">
+    <div class="container">
+        <a href="#" class="navbar-brand">UAEMex</a>
+        <a href="/alumnos/agregar" class="text-light bg-dark">Alumno</a>
+        <a href="/asignaturas/agregar" class="text-light bg-dark">Asignatura</a>
+        <a href="/profesores/agregar" class="text-light bg-dark">Profesor</a>
+        <a href="/carreras/agregar" class="text-light bg-dark">Carreras</a>
+        <a href="/" class="text-light bg-dark">Cerrar sesión</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            {{> asignaturas/asignaturaForm}}
+        </div>
+        <div class="col-md-7">
+            {{> asignaturas/asignaturaTabla}}
+        </div>
+    </div>
+</div>

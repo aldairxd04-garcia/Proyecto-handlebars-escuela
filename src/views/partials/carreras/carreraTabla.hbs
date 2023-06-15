@@ -1,0 +1,46 @@
+{{#if carreras}}
+<table class="table table-bordered table-hover table-secondary">
+    <thead>
+        <tr class="text-center">
+            <th>Num.</th>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Siglas</th>
+            <th>Area</th>
+            <th>Modalidad</th>
+            <th>Periodo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each carreras}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{matricula}}</td>
+            <td>{{nombre}}</td>
+            <td>{{siglas}}</td>
+            <td>{{area}}</td>
+            <td>{{modalidad}}</td>
+            <td>{{periodo}}</td>
+            <td>
+                {{#if opcion}}
+                <a href="/status/carreras/{{_id}}" class="btn btn-outline-warning">No disponible</a>
+                {{else}}
+                <a href="/status/carreras/{{_id}}" class="btn btn-outline-success">Disponible</a>
+                {{/if}}
+                <a href="/update/carreras/{{_id}}" class="btn btn-outline-primary">Actualizar</a>
+                <a href="/delete/carreras/{{_id}}" class="btn btn-outline-danger">Eliminar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+    <h1>No hay carreras</h1>
+    <img src="/icons/file.png" class="w-75">
+</div>
+</div>
+{{/if}}

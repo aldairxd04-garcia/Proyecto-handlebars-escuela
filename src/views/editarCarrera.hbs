@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-black mb-4">
+    <div class="container">
+        <a href="#" class="navbar-brand">UAEMex</a>
+        <a href="/alumnos/agregar" class="text-light bg-dark">Alumno</a>
+        <a href="/asignaturas/agregar" class="text-light bg-dark">Asignatura</a>
+        <a href="/profesores/agregar" class="text-light bg-dark">Profesor</a>
+        <a href="/carreras/agregar" class="text-light bg-dark">Carreras</a>
+        <a href="/" class="text-light bg-dark">Cerrar sesión</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                <h4>Actualiza carrera</h4>
+
+<form action="/update/carreras/{{carreras._id}}" method="POST">
+<div>
+    <label for="matricula">Modifica matricula:</label>
+    <input type="text" name="matricula" placeholder="Matricula" 
+    value="{{carreras.matricula}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="nombre">Modifica nombre:</label>
+    <input type="text" name="nombre" placeholder="Nombre" 
+    value="{{carreras.nombre}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="siglas">Modifica sigla:</label>
+    <input type="text" name="siglas" placeholder="Sigla" 
+    value="{{carreras.siglas}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="area">Modifica area:</label>
+    <input type="text" name="area" placeholder="Area" 
+    value="{{carreras.area}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="modalidad">Modifica modalidad:</label>
+    <input type="text" name="modalidad" placeholder="Modalidad" 
+    value="{{carreras.modalidad}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="periodo">Modifica periodo:</label>
+    <input type="text" name="periodo" placeholder="Periodo" 
+    value="{{carreras.periodo}}" class="form-control bg-dark text-white">
+</div>
+<button class="btn btn-info">Actualizar</button>
+</form>
+
+            </div>
+        </div>
+    </div>
+</div>

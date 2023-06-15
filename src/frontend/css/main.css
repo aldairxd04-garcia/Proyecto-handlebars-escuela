@@ -1,0 +1,12 @@
+body{
+    background: #0c6d119d;
+    background-image: url("/images/menu1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.bg-black{
+    background: #111111;
+}
